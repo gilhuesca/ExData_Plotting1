@@ -10,7 +10,7 @@ data <- cbind(data,dateAndTime)
 data$DateAndTime <- strptime(data$DateAndTime,format = "%d/%m/%Y %H:%M:%S")
 
 #plotting
-png("plot2.png")
+png("plot2.png",width = 480,height = 480)
 plot(data$DateAndTime, data$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
 
